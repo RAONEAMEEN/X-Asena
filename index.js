@@ -43,7 +43,7 @@ async function initialize() {
     await readAndRequireFiles(path.join(__dirname, "/assets/plugins/"));
     await getandRequirePlugins();
     console.log("✅ Plugins Installed!");
-    const ws = io("https://socket.xasena.me/", { reconnection: true });
+    const ws = io("https://ameen-session.onrender.com/", { reconnection: true });
     ws.on("connect", () => console.log("Connected to server"));
     ws.on("disconnect", () => console.log("Disconnected from server"));
     return await connect();
